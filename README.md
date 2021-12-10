@@ -24,7 +24,7 @@ Bug fixes, docs, and enhancements welcome!
 
 ## Authors
 
-- Kambiz Asadzadeh: Qt specialist and UI designer
-- Max Base: Algorithm developer, and Maintainer
+- **Kambiz Asadzadeh**: Qt specialist and UI designer
+- **Max Base**: Algorithm developer, and Maintainer
 
 © Copyright 2021, Max Base
