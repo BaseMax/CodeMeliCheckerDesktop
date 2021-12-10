@@ -14,7 +14,7 @@ endif()
 
 # ------ PROJECT INFO ------
 # Options
-set(PROJECT_NAME "ProjectTemplate" CACHE STRING "Project Name")
+set(PROJECT_NAME "Code-Meli" CACHE STRING "Project Name")
 set(PROJECT_TARGET ${PROJECT_NAME} CACHE STRING "Target Name")
 
 set(PROJECT_VERSION_MAJOR 0)
