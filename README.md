@@ -4,6 +4,7 @@
 
 - Easily check a code-meli is correct or no
 - Cross paltform (Windows, macOS, Linux)
+- Soon...
 
 ### Preview
 
@@ -24,7 +25,7 @@ Bug fixes, docs, and enhancements welcome!
 
 ## Authors
 
-- **Kambiz Asadzadeh**: Qt specialist and UI designer
+- **Kambiz Asadzadeh**: **Qt** specialist, and UI designer
 - **Max Base**: Algorithm developer, and Maintainer
 
 © Copyright 2021, Max Base
