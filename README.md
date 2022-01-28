@@ -7,7 +7,7 @@ A tool for validation Iranian national code.
 - Cross paltform desktops (Windows, macOS, Linux)
 - Soon...
 
-## Supported and Tested platforms:
+### Supported and Tested platforms:
 
 - [x] macOS
 - [x] Windows
@@ -19,5 +19,16 @@ A tool for validation Iranian national code.
 | -------------- | -------------- |
 | ![](screenshots/success.png) | ![](screenshots/error.png) |
 
+### Requirements:
+- C++17
+- Qt6 [Make sure you have Qt6.].
 
 ### Installing
+Use the following commands:
+
+```
+cd build
+cmake ..
+make
+./CodeMelli-Checker
+```
