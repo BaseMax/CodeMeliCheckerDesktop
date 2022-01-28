@@ -21,19 +21,24 @@
  * SOFTWARE.
  */
 
-#ifndef CONFIG_HPP
-#define CONFIG_HPP
+#ifndef MAINWINDOW_HPP
+#define MAINWINDOW_HPP
 
-#include "common.hpp"
+#include <QMainWindow>
 
-using namespace Types;
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
 
-/*!
- * \brief The Config struct
- * \details Tegra will gets all default or custom variables from base config file.
- */
-struct Config {
-  inline static JSon GET = JSon::parse(if_streamer("config/system-config.json"));
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+
+private:
+    Ui::MainWindow *ui;
 };
-
-#endif // CONFIG_HPP
+#endif // MAINWINDOW_HPP

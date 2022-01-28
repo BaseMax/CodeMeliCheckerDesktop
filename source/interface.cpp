@@ -1,6 +1,6 @@
 #include "interface.hpp"
 
-namespace CodeMeli {
+namespace CodeMelli {
 
 IdCode::IdCode(QObject* parent)
     : QObject(parent), m_status(false)
@@ -9,15 +9,16 @@ IdCode::IdCode(QObject* parent)
 }
 
 
-CodeMeli::IdCode::~IdCode() {}
+CodeMelli::IdCode::~IdCode() {}
 
-void IdCode::setIdCode(int code, InsertType type) {
+void IdCode::setIdCode(const QString& code) {
     //ToDo...
-    bool res{false};
-    setStatus(false);
+    qDebug() << code;
+    bool res{true};
+    setStatus(res);
 }
 
-int IdCode::code() const {
+QString IdCode::code() const {
     return m_code;
 }
 
@@ -25,10 +26,10 @@ bool IdCode::status() const {
     return m_status;
 }
 
-void IdCode::setCode(int id) {
-    if (m_code == id)
+void IdCode::setCode(QString code) {
+    if (m_code == code)
         return;
-    m_code = id;
+    m_code = code;
     emit codeChanged(m_code);
 }
 
@@ -40,4 +41,3 @@ void IdCode::setStatus(bool status) {
 }
 
 }
-

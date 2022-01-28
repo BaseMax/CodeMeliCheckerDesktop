@@ -9,32 +9,31 @@
 #include <QObject>
 #include <QQmlContext>
 
-
-namespace CodeMeli {
+namespace CodeMelli {
 
 enum class InsertType { Default, File };
 
 class IdCode : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int code READ code WRITE setCode NOTIFY codeChanged)
+    Q_PROPERTY(QString code READ code WRITE setCode NOTIFY codeChanged)
     Q_PROPERTY(bool status READ status WRITE setStatus NOTIFY statusChanged)
 
-public:
-    IdCode(QObject* parent = nullptr);
+        public:
+                 IdCode(QObject* parent = nullptr);
     ~IdCode();
 
     /*!
      * \brief setIdCode as INVOKABLE function gets national code and insert type.
      * \return boolean. [returns true if the pattern of id code is correct!]
      */
-    Q_INVOKABLE void setIdCode(int code, InsertType type);
+    Q_INVOKABLE void setIdCode(const QString& code);
 
     /*!
      * \brief code function
      * \returns national id code as unit [unsigned int]
      */
-    int code() const;
+    QString code() const;
 
     /*!
      * \brief status
@@ -47,7 +46,7 @@ public slots:
      * \brief setCode
      * \param id
      */
-    void setCode(int id);
+    void setCode(QString code);
 
     /*!
      * \brief setStatus
@@ -56,12 +55,12 @@ public slots:
     void setStatus(bool status);
 
 signals:
-    void codeChanged(int busy);
+    void codeChanged(QString code);
     void statusChanged(bool status);
 
 
 private:
-    int m_code;
+    QString m_code;
     bool m_status;
 };
 
