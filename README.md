@@ -4,7 +4,7 @@
 
 | Correct        | Wrong          |
 | -------------- | -------------- |
-| ![](demo1.jpg) | ![](demo2.jpg) |
+| ![](screenshots/success.png) | ![](screenshots/error.png) |
 
 ### Features
 
