@@ -1,4 +1,4 @@
-const checkCodeMeli = (code) => {
+const checkCodeMelli = (code) => {
    const bads = ["0000000000", "1111111111","2222222222","3333333333","4444444444","5555555555","6666666666","7777777777","8888888888","9999999999"];
 
    // Return false If `code` is null or undefined
@@ -43,6 +43,6 @@ const checkCodeMeli = (code) => {
       s += parseInt(code.charAt(i), 10) * (10 - i);
    s = s % 11;
 
-   return (s < 2 && numbers.at(-1) === s) ||
-          (s >= 2 && numbers.at(-1) === (11-s));
+   return (s < 2 && numbers[numbers.length-1]=== s) ||
+          (s >= 2 && numbers[numbers.length-1] === (11-s));
 };

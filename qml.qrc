@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ui/qtquick/assets/fonts/iconic/Font Awesome 5 Free-Regular-400.otf</file>
+        <file>ui/qtquick/assets/fonts/iconic/Font Awesome 5 Free-Solid-900.otf</file>
+        <file>ui/qtquick/assets/fonts/iconic/Font Awesome 5 Brands-Regular-400.otf</file>
+        <file>ui/qtquick/assets/fonts/content/Samim-FD.ttf</file>
+        <file>ui/qtquick/main.qml</file>
+        <file>ui/qtquick/Component/HorizontalSpacer.qml</file>
+        <file>ui/qtquick/Component/Button.qml</file>
+        <file>ui/qtquick/Component/TextInput.qml</file>
+        <file>ui/qtquick/Component/VerticalSpacer.qml</file>
+        <file>source/checker.js</file>
+        <file>ui/qtquick/FontSystem.qml</file>
+    </qresource>
+</RCC>

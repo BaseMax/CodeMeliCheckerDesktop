@@ -7,6 +7,8 @@ import App.IdCode.Interface 1.0
 
 import "./Component" as Controls
 
+import "qrc:/source/checker.js" as JsChecker
+
 ApplicationWindow {
     width: 640
     height: 480
@@ -18,10 +20,18 @@ ApplicationWindow {
     LayoutMirroring.enabled: appRootObjects.isLeftToRight ? false : true
     LayoutMirroring.childrenInherit: appRootObjects.isLeftToRight ? false : true
 
+    property bool status : false
+
     QtObject {
         id: appRootObjects
         property bool desktopMode: true
         property bool isLeftToRight: true
+    }
+
+    function check() {
+        status = JsChecker.checkCodeMelli(codeInput.value)
+        messageIcon.visible = true;
+        messageText.visible = true;
     }
 
     QtObject {
@@ -63,13 +73,13 @@ ApplicationWindow {
         id: codeInterface
     }
 
-    Connections {
-        id: codeConnection
-        target: codeInterface
-        function onStatusChanged() {
-            messageIcon.visible = true
-        }
-    }
+//    Connections {
+//        id: codeConnection
+//        target: codeInterface
+//        function onStatusChanged() {
+//            messageIcon.visible = true
+//        }
+//    }
 
     Item {
         width: parent.width / 2
@@ -91,8 +101,10 @@ ApplicationWindow {
                 font.pixelSize: appStyle.display
                 font.bold: true
                 font.weight: Font.Bold
-                color: codeInterface.status ? appStyle.success : appStyle.error
-                text: codeInterface.status ? "\uf058" : "\uf00d"
+                //color: codeInterface.status ? appStyle.success : appStyle.error
+                color: status ? appStyle.success : appStyle.error
+                //text: codeInterface.status ? "\uf058" : "\uf00d"
+                text: status ? "\uf058" : "\uf00d"
                 renderType: Text.NativeRendering
                 visible: false
             }
@@ -104,9 +116,12 @@ ApplicationWindow {
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: appStyle.h6
-                color: codeInterface.status ? appStyle.success : appStyle.error
-                text: codeInterface.status ? "کد ملی معتبر است!" : "کد ملی معتبر نیست!"
+                //color: codeInterface.status ? appStyle.success : appStyle.error
+                color: status ? appStyle.success : appStyle.error
+                //text: codeInterface.status ? "کد ملی معتبر است!" : "کد ملی معتبر نیست!"
+                text: status ? "کد ملی معتبر است!" : "کد ملی معتبر نیست!"
                 renderType: Text.NativeRendering
+                visible: false
             }
 
             Item {
@@ -133,7 +148,8 @@ ApplicationWindow {
                 text: "بررسی"
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 onClicked: {
-                    codeInterface.setIdCode(codeInput.value)
+                    //codeInterface.setIdCode(codeInput.value) //CPP Method.
+                    check(); //JS Mothod.
                 }
             }
 
