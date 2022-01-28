@@ -8,6 +8,7 @@ if (USE_NONE_STL_JSON)
   add_definitions(-DUSE_NONE_STL_JSON)
 endif()
 
+if(UNIX)
   find_package(PkgConfig QUIET)
   pkg_search_module(${DOCTEST_NAME} doctest)
   #Package data repository.
@@ -35,7 +36,7 @@ endif()
       FetchContent_MakeAvailable(json)
       list(APPEND LIB_MODULES nlohmann_json::nlohmann_json)
   endif()
-
+endif()
 if(NOT NONE_STL_JSON_FOUND)
   return()
 endif()

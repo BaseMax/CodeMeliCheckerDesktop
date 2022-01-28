@@ -8,6 +8,7 @@ if (USE_OPENSSL)
   add_definitions(-DUSE_OPENSSL)
 endif()
 
+if(UNIX)
   find_package(PkgConfig QUIET)
   pkg_search_module(${OPENSSL_NAME} openssl)
   #Package data repository.
@@ -32,7 +33,7 @@ endif()
       )
   list(APPEND LIB_MODULES crypto ssl)
   endif()
-
+endif()
 if(NOT OPENSSL_FOUND)
   return()
 endif()

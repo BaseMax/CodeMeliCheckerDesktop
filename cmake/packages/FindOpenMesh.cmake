@@ -9,6 +9,7 @@ if (USE_OPENMESH)
   add_definitions(-DUSE_OPENMESH)
 endif()
 
+if(UNIX)
   find_package(PkgConfig QUIET)
   pkg_search_module(${OPENMESH_NAME} openmesh)
   #Package data repository.
@@ -39,7 +40,7 @@ endif()
       list(APPEND LIB_MODULES ${OPENMESH_LIBRARIES})
       list(APPEND LIB_TARGET_COMPILER_DEFINATION -D_USE_MATH_DEFINES)
   endif()
-
+endif()
 if(NOT OPENMESH_FOUND)
   return()
 endif()

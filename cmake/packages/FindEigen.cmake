@@ -8,6 +8,7 @@ if (USE_EIGEN)
   add_definitions(-DUSE_EIGEN)
 endif()
 
+if(UNIX)
   find_package(PkgConfig QUIET)
   pkg_search_module(${EIGEN_NAME} eigen)
   #Package data repository.
@@ -34,7 +35,7 @@ endif()
           FetchContent_MakeAvailable(eigen)
           list(APPEND LIB_MODULES eigen)
   endif()
-
+endif()
 if(NOT EIGEN_FOUND)
   return()
 endif()

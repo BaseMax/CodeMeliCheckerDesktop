@@ -8,6 +8,7 @@ if (USE_CATCH2)
   add_definitions(-DUSE_CATCH2)
 endif()
 
+if(UNIX)
   find_package(PkgConfig QUIET)
   pkg_search_module(Catch2 catch2)
   #Package data repository.
@@ -34,8 +35,8 @@ endif()
   FetchContent_MakeAvailable(catch2)
   list(APPEND LIB_MODULES Catch2::Carch2)
   endif()
-
-  if(NOT CATCH2_FOUND)
+endif()
+if(NOT CATCH2_FOUND)
   return()
 endif()
 

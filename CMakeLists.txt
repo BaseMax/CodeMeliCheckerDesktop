@@ -1,8 +1,3 @@
-# -------------------- PROJECT INFO --------------------
-#   Title   :                       Project Template
-#   Version :                       Kambiz Asadzadeh
-# ------------------------------------------------------
-
 cmake_minimum_required(VERSION 3.18)
 cmake_policy(SET CMP0048 NEW)
 
@@ -16,8 +11,8 @@ include(FetchContent)
 
 # ------ PROJECT INFO ------
 # Options
-set(PROJECT_NAME "CodeMelli-Checker" CACHE STRING "Project Name.") #You can change "ProjectTemplate" with your project name.
-set(PROJECT_TARGET ${PROJECT_NAME} CACHE STRING "A tool for validation Iranian national code.")
+set(PROJECT_NAME "ProjectTemplate" CACHE STRING "Project Name.") #You can change "ProjectTemplate" with your project name.
+set(PROJECT_TARGET ${PROJECT_NAME} CACHE STRING "Project Target Name.")
 
 set(PROJECT_VERSION_MAJOR 0)
 set(PROJECT_VERSION_MINOR 9)
@@ -61,7 +56,7 @@ set(PROJECT_VERSION_STRING ${PROJECT_VERSION})
 set(PROJECT_LANGUAGES CXX)
 
 #Use these keys [stl, qt, qtwidget, qtquick]
-set(PROJECT_MAIN_TYPE "qtquick" CACHE STRING "Library System.")
+set(PROJECT_MAIN_TYPE "stl" CACHE STRING "Library System.")
 
 #Use these keys [macOS, Windows, Linux, iOS, Android]
 set(PLATFORM_OS "macOS" CACHE STRING "OS Type.")

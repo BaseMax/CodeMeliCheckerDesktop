@@ -8,6 +8,7 @@ if (USE_CTRE)
   add_definitions(-DUSE_CTRE)
 endif()
 
+if(UNIX)
   find_package(PkgConfig QUIET)
   pkg_search_module(${DOCTEST_NAME} ctre)
   #Package data repository.
@@ -32,7 +33,7 @@ endif()
           FetchContent_MakeAvailable(ctre)
           list(APPEND LIB_MODULES ctre)
   endif()
-
+endif()
 if(NOT CTRE_FOUND)
   return()
 endif()

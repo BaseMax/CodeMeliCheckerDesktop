@@ -8,6 +8,7 @@ if (USE_FMT)
   add_definitions(-DUSE_FMT)
 endif()
 
+if(UNIX)
     if(USE_FMT)
         set(FETCHCONTENT_QUIET off)
         get_filename_component(fmt_base "${CMAKE_CURRENT_SOURCE_DIR}/${THIRD_PARTY}/${PLATFORM_FOLDER_NAME}/${FMT_NAME}"
@@ -29,7 +30,7 @@ endif()
         FetchContent_MakeAvailable(fmt)
         list(APPEND LIB_MODULES fmt::fmt-header-only)
     endif()
-
+endif()
 if(NOT FMT_FOUND)
   return()
 endif()

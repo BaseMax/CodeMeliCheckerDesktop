@@ -8,6 +8,7 @@ if (USE_DOC_TEST)
   add_definitions(-DUSE_DOC_TEST)
 endif()
 
+if(UNIX)
   find_package(PkgConfig QUIET)
   pkg_search_module(${DOCTEST_NAME} doctest)
   #Package data repository.
@@ -33,7 +34,7 @@ endif()
       target_link_libraries(${PROJECT_NAME} PRIVATE doctest)
       list(APPEND LIB_MODULES doctest)
   endif()
-
+endif()
 if(NOT DOCTEST_FOUND)
   return()
 endif()

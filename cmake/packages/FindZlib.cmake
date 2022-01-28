@@ -8,6 +8,7 @@ if (USE_ZLIB)
   add_definitions(-DUSE_ZLIB)
 endif()
 
+if(UNIX)
   find_package(PkgConfig QUIET)
   pkg_search_module(${ZLIB_NAME} zlib)
   #Package data repository.
@@ -37,7 +38,7 @@ endif()
       list(APPEND LIB_TARGET_COMPILER_DEFINATION "")
       list(APPEND LIB_TARGET_PROPERTIES "-D_FILE_OFFSET_BITS=64")
   endif()
-
+endif()
 if(NOT ZLIB_FOUND)
   return()
 endif()

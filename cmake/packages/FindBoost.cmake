@@ -8,6 +8,7 @@ if (USE_BOOST)
   add_definitions(-DUSE_BOOST)
 endif()
 
+if(UNIX)
   find_package(PkgConfig QUIET)
   pkg_search_module(Boost boost)
   #Package data repository.
@@ -34,7 +35,7 @@ endif()
   FetchContent_MakeAvailable(boost)
   list(APPEND LIB_MODULES ${Boost_LIBRARIES})
   endif()
-
+endif()
 if(NOT BOOST_FOUND)
   return()
 endif()

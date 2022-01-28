@@ -1,14 +1,5 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>Component/TextInput.qml</file>
-        <file>Component/Button.qml</file>
-        <file>Component/HorizontalSpacer.qml</file>
-        <file>FontSystem.qml</file>
-        <file>assets/fonts/iconic/Font Awesome 5 Free-Solid-900.otf</file>
-        <file>assets/fonts/iconic/Font Awesome 5 Free-Regular-400.otf</file>
-        <file>assets/fonts/iconic/Font Awesome 5 Brands-Regular-400.otf</file>
-        <file>assets/fonts/content/Samim-FD.ttf</file>
-        <file>Component/VerticalSpacer.qml</file>
     </qresource>
 </RCC>

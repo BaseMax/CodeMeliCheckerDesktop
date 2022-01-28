@@ -8,6 +8,7 @@ if (USE_GOOGLE_TEST)
   add_definitions(-DUSE_GOOGLE_TEST)
 endif()
 
+if(UNIX)
   find_package(PkgConfig QUIET)
   pkg_search_module(GTest gtest)
   #Package data repository.
@@ -34,7 +35,7 @@ endif()
   FetchContent_MakeAvailable(gtest)
   list(APPEND LIB_MODULES gtest)
   endif()
-
+endif()
 if(NOT GTEST_FOUND)
   return()
 endif()
