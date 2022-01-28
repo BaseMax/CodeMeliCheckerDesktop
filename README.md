@@ -26,9 +26,11 @@ A tool for validation Iranian national code.
 ### Installing
 Use the following commands:
 
+- PLATFORM_OS = [Windows, macOS, Linux]
+
 ```
 cd build
-cmake ..
+cmake -DPLATFORM_OS="macOS" ..
 make
 ./CodeMelli-Checker
 ```
