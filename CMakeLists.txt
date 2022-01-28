@@ -17,7 +17,7 @@ include(FetchContent)
 # ------ PROJECT INFO ------
 # Options
 set(PROJECT_NAME "CodeMelli-Checker" CACHE STRING "Project Name.") #You can change "ProjectTemplate" with your project name.
-set(PROJECT_TARGET ${PROJECT_NAME} CACHE STRING "A tool for validation Iranian national code.")
+set(PROJECT_TARGET ${PROJECT_NAME} CACHE STRING "Project Target Name.")
 
 set(PROJECT_VERSION_MAJOR 0)
 set(PROJECT_VERSION_MINOR 9)
@@ -67,10 +67,10 @@ set(PROJECT_MAIN_TYPE "qtquick" CACHE STRING "Library System.")
 set(PLATFORM_OS "macOS" CACHE STRING "OS Type.")
 
 #You can replace your project description with this string.
-set(PROJECT_DESCRIPTION "A template for modern C++ projects with useful features for developing cross-platform projects." CACHE STRING "Project Description")
+set(PROJECT_DESCRIPTION "A tool for validation Iranian national code." CACHE STRING "Project Description")
 
 #Your project website address.
-set(PROJECT_HOMEPAGE_URL "https://kambizasadzadeh.com" CACHE STRING "Project URL.")
+set(PROJECT_HOMEPAGE_URL "https://github.com/BaseMax/CodeMeliCheckerDesktop" CACHE STRING "Project URL.")
 
 
 #Project pre-configuration system.

@@ -3,7 +3,7 @@ set(QT_NAME "Qt")
 set(QT_DESCRIPTION "A moidern cross-platform graphical user interfaces framework.")
 
 #Pakcage option.
-option(USE_QT ${QT_DESCRIPTION} FALSE)
+option(USE_QT ${QT_DESCRIPTION} TRUE)
 if (USE_QT)
   add_definitions(-DUSE_QT)
 endif()
