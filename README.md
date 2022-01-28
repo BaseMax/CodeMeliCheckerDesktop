@@ -1,18 +1,23 @@
-# Code-Meli Checker Desktop
+# Code-Melli Checker Desktop
+A tool for validation Iranian national code.
 
-### Demo
+### Features
+
+- Easily check a code-melli is correct or no
+- Cross paltform desktops (Windows, macOS, Linux)
+- Soon...
+
+## Supported and Tested platforms:
+
+- [x] macOS
+- [x] Windows
+- [x] Linux
+
+### Preview
 
 | Correct        | Wrong          |
 | -------------- | -------------- |
 | ![](screenshots/success.png) | ![](screenshots/error.png) |
 
-### Features
-
-- Easily check a code-meli is correct or no
-- Cross paltform (Windows, macOS, Linux)
-- Soon...
-### Preview
-
-IMAGEs are here
 
 ### Installing
