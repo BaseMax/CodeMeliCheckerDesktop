@@ -17,7 +17,7 @@ A tool for validation Iranian national code.
 
 | Correct        | Wrong          |
 | -------------- | -------------- |
-| ![](screenshots/success.png) | ![](screenshots/error.png) |
+| ![](screenshots/success.jpg) | ![](screenshots/error.jpg) |
 
 ### Requirements:
 - C++17
