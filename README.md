@@ -7,23 +7,25 @@ A tool for validation Iranian national code.
 - Cross paltform desktops (Windows, macOS, Linux)
 - Soon...
 
-### Supported and Tested platforms:
-
-- [x] macOS
-- [x] Windows
-- [x] Linux
-
 ### Preview
 
 | Correct        | Wrong          |
 | -------------- | -------------- |
 | ![](screenshots/success.jpg) | ![](screenshots/error.jpg) |
 
+### Supported and Tested platforms:
+
+- [x] macOS
+- [x] Windows
+- [x] Linux
+
 ### Requirements:
+
 - C++17
 - Qt6 [Make sure you have Qt6.].
 
 ### Installing
+
 Use the following commands:
 
 - PLATFORM_OS = [Windows, macOS, Linux]
