@@ -23,7 +23,7 @@ Desktop (Qt/Cross-platform) tool for validation Iranian National code.
 ### Requirements
 
 - C++17
-- Qt6 [Make sure you have Qt6.].
+- Qt6 [Make sure you have Qt6]
 
 ### Installing
 
