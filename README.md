@@ -1,7 +1,8 @@
 # Code-Melli Checker Desktop
-A tool for validation Iranian national code.
 
-### Features
+Desktop (Qt/Cross-platform) tool for validation Iranian National code.
+
+## Features
 
 - Easily check a code-melli is correct or no
 - Cross paltform desktops (Windows, macOS, Linux)
@@ -13,13 +14,13 @@ A tool for validation Iranian national code.
 | -------------- | -------------- |
 | ![](screenshots/success.jpg) | ![](screenshots/error.jpg) |
 
-### Supported and Tested platforms:
+### Supported and Tested platforms
 
 - [x] macOS
 - [x] Windows
 - [x] Linux
 
-### Requirements:
+### Requirements
 
 - C++17
 - Qt6 [Make sure you have Qt6.].
