@@ -5,8 +5,8 @@ Desktop (Qt/Cross-platform) tool for validation Iranian National code.
 ## Features
 
 - Easily check a code-melli is correct or no
+- QML UI Interface
 - Cross paltform desktops (Windows, macOS, Linux)
-- Soon...
 
 ### Preview
 
